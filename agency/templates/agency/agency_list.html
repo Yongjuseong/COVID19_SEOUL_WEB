@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}COVID19 연관기관 리스트{% endblock %}
+
+{% block content %}
+
+    <h1>Associated Agency List</h1>
+    <br>
+
+    <ul>
+        {% for agency in object_list %}
+        <li><a href="{% url 'agency:detail' agency.id %}">{{ agency }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+

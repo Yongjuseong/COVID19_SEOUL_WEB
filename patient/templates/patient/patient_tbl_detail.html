@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}COVID19 환자 정보{% endblock %}
+{% block content %}
+        <div id = "content">
+            <h1>{{object.name}}</h1>
+            <table border="1">
+                <th></th>
+                <tr> <!-- 첫번째 줄-->
+                    <td>이름</td>
+                    <td>{{object.name}}</td>
+                    <td>상태</td>
+                    <td>{{object.status}}</td>
+                </tr>
+                <tr> <!--두번째 줄-->
+                    <td>휴대폰번호</td>
+                    <td>{{object.pnumber}}</td>
+                    <td>이메일</td>
+                    <td>{{object.email}}</td>
+                </tr>
+                <tr> <!--세번째 줄-->
+                    <td>주소</td>
+                    <td colspan="3">{{object.address}}</td>
+                </tr>
+                <tr> <!--네번째 줄-->
+                    <td>입원날짜</td>
+                    <td colspan="3">{{object.hospital_dt}}</td>
+                </tr>
+            </table>
+ {% endblock %}
+ 

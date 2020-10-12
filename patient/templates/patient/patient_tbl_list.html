@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}COVID19 환자리스트{% endblock %}
+{% block content %}
+
+            <h1>Patient List in Seoul</h1>
+            <ul>
+                {% for patient_tbl in patient_tbls %}
+                    <li> <a href = "{%url 'patient:detail' patient_tbl.id %}">{{patient_tbl}}</a></li>
+                {% endfor %}
+            </ul>
+
+{% endblock %}
+            
